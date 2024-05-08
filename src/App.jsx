@@ -26,8 +26,6 @@ import { Typewriter } from "react-simple-typewriter";
 import Lottie from "lottie-react";
 import heroAnim from "./assets/heroAnim.json";
 import codingTabs from "./assets/codingTabs.json";
-import Project from "./Components/Project";
-import project1 from "./assets/images/project1.png";
 import Reveal from "./Components/Reveal";
 import { motion, useAnimation, useInView } from "framer-motion";
 import WAQR from "./assets/images/WhatsAppQR.jpeg";
@@ -35,10 +33,10 @@ import Navbar from "./Components/Navbar";
 import LetterAnimation from "./Components/LetterAnimation";
 import Skills from "./Components/Skills";
 import anim1 from "./assets/anim1.json";
-import anim2 from "./assets/anim2.json";
 import anim3 from "./assets/anim3.json";
-import { debounce } from "lodash";
 import Projects from "./Components/Projects";
+import hiImg from "./assets/images/Hi.gif";
+import { debounce } from "lodash";
 
 const { Title, Text } = Typography;
 const { defaultAlgorithm, darkAlgorithm } = theme;
@@ -173,7 +171,7 @@ function App() {
                                                 style={{
                                                     width: 28,
                                                 }}
-                                                src="src/assets/images/Hi.gif"
+                                                src={hiImg}
                                                 alt="👋"
                                             />
                                             . I'm
