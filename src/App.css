@@ -1,0 +1,456 @@
+#root {
+    text-align: center;
+    height: 100% !important;
+    overflow: auto;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    width: 100%;
+    max-width: 1580px;
+
+    padding: 0;
+    background-color: transparent !important;
+    padding: 1rem;
+    margin: 2rem auto 1rem auto;
+    transition: all ease-in-out 400ms;
+}
+
+.headerDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+    border-radius: 10rem;
+    border: none;
+}
+
+.content {
+    padding: 1rem 2rem;
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    height: 100% !important;
+    text-align: center;
+    /* width: 100%; */
+    /* height: 100%; */
+}
+
+.layout {
+    /* background-color: transparent; */
+    min-height: 100vh;
+    height: 100% !important;
+    width: 100% !important;
+    overflow: auto;
+}
+
+.ant-btn,
+.ant-btn-primary,
+.ant-btn-lg {
+    border-radius: 5rem !important;
+    transition: all 300ms ease;
+}
+
+.ant-btn-lg {
+    padding: 4px 25px !important;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.sec1 {
+    height: calc(100vh - 64px);
+    position: relative;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.sec1bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* animation: rotate infinite 45s linear; */
+}
+
+.lottieBgCont {
+    position: relative;
+}
+
+.lottieBg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.bigBtn:hover {
+    scale: 1.15;
+    padding-left: 48px !important;
+    padding-right: 48px !important;
+    box-shadow: rgba(100, 100, 111, 0.8) 0px 0px 29px 0px;
+}
+
+/* Define the animation for hovering in */
+@keyframes rotateAndScaleIn {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    100% {
+        transform: rotate(360deg) scale(1.2);
+    }
+}
+
+/* Define the animation for hovering out */
+@keyframes rotateAndScaleOut {
+    0% {
+        transform: rotate(360deg) scale(1.2);
+    }
+    100% {
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+/* Apply the initial animation and transition to the image */
+.Skill {
+    animation: none; /* Disable initial animation */
+    transition: all 300ms ease;
+    border: 1px solid transparent; /* Add a transparent border */
+    cursor: pointer;
+    width: 40%;
+}
+
+/* Apply the hover-in animation */
+.Skill:hover {
+    animation: rotateAndScaleIn 500ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Apply the hover-out animation */
+.Skill:not(:hover) {
+    animation: rotateAndScaleOut 500ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.ant-card-hoverable {
+    transition: all 300ms ease;
+}
+
+.ant-card-hoverable:hover {
+    box-shadow: rgba(100, 100, 111, 0.8) 0px 7px 29px 0px;
+    scale: 1.1;
+}
+
+.ant-divider {
+    margin: 5rem auto !important;
+}
+
+.typewriter {
+    margin: 0 0 20px 0 !important;
+    font-size: 3.5rem !important;
+    font-weight: 700 !important;
+    line-height: 1 !important;
+    height: 64 !important;
+    width: 550px;
+    text-align: left;
+}
+
+.firstSec1 {
+    width: 100% !important;
+}
+
+.mainText {
+    font-size: 1.8rem;
+}
+
+.secText {
+    font-size: 1.6rem;
+}
+
+.smallText {
+    font-size: 1.2rem;
+}
+
+.heroLottie {
+    max-width: 90vw;
+    width: 100%;
+}
+
+.logo1 {
+    font-size: 1.5rem;
+}
+
+.subTitle {
+    font-size: 4rem !important;
+    font-weight: 500;
+    z-index: 5;
+}
+.subTitle2 {
+    font-size: 3rem !important;
+    font-weight: 500;
+    z-index: 5;
+}
+
+.projectsSec {
+    height: 100vh;
+}
+
+.daSmolLottie {
+    display: none;
+}
+
+.contactText {
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.contactIcon {
+    font-size: 5rem;
+    margin: 15px;
+}
+
+.githubBtmLink {
+}
+
+@media screen and (max-width: 600px) {
+    .typewriter {
+        font-size: 2rem !important;
+        width: auto !important;
+    }
+    .firstSecFlex {
+        flex-direction: column;
+    }
+    .mainText {
+        font-size: 1.4rem;
+    }
+
+    .secText {
+        font-size: 1.2rem;
+    }
+    .smallText {
+        font-size: 1rem;
+    }
+    .firstSec1 {
+        text-align: center !important;
+        justify-content: center !important;
+        align-items: center;
+    }
+    .textBox1 {
+        text-align: center !important;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .textBox2 {
+        text-align: center !important;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .homeBtn {
+        display: none;
+    }
+    .prevWorkBtn {
+        display: none;
+    }
+    .contactBtn {
+        display: none;
+    }
+    .githubLink {
+        display: none;
+    }
+    .headerDiv {
+        width: 100%;
+        padding: 1.2rem;
+        margin: 0;
+    }
+    .subTitle2 {
+        font-size: 1.7em !important;
+        font-weight: 500 !important;
+    }
+    .subTitle {
+        font-size: 2.5rem !important;
+        font-weight: 500 !important;
+    }
+    .ant-divider {
+        margin: 2rem auto !important;
+    }
+    .skillText {
+        font-size: 1rem !important;
+    }
+    .Skill {
+        width: 60%;
+    }
+    .projectsSec {
+        height: auto;
+    }
+    .projectCard {
+        margin: 1rem;
+    }
+    .daBigLottie {
+        display: none;
+    }
+    .daSmolLottie {
+        display: block;
+    }
+    .contactText {
+        font-size: 12px;
+        font-weight: 400;
+    }
+    .contactIcon {
+        font-size: 3rem;
+        margin: 0px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .typewriter {
+        font-size: 1.5rem !important;
+    }
+    .logo1 {
+        font-size: 1rem;
+    }
+    .daBigLottie {
+        display: none;
+    }
+    .daSmolLottie {
+        display: block;
+    }
+    .contactText {
+        font-size: 12px;
+        font-weight: 400;
+    }
+    .contactIcon {
+        font-size: 2rem;
+        margin: 0px;
+    }
+    .subTitle {
+        font-size: 2rem !important;
+    }
+    .subTitle2 {
+        font-size: 1.4em !important;
+        font-weight: 500 !important;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 899px) {
+    .typewriter {
+        font-size: 1.8rem !important;
+        width: 280px !important;
+    }
+    .mainText {
+        font-size: 1.4rem;
+    }
+
+    .secText {
+        font-size: 1.2rem;
+    }
+    .smallText {
+        font-size: 1rem;
+    }
+    .homeBtn {
+        display: none;
+    }
+    .logo1 {
+        font-size: 1.2rem;
+    }
+    .prevWorkBtn {
+        font-size: 12px;
+    }
+    .contactBtn {
+        font-size: 12px;
+    }
+    .githubLink {
+        font-size: 14px;
+    }
+    .headerDiv {
+        width: 100%;
+        padding: 1rem;
+        margin: 0;
+        /* font-size: 12px !important; */
+    }
+    .subTitle2 {
+        font-size: 2.5rem !important;
+        font-weight: 500 !important;
+    }
+    .subTitle {
+        font-size: 3rem !important;
+        font-weight: 500 !important;
+    }
+    .projectsSec {
+        height: auto;
+    }
+    .projectCard {
+        margin: 1rem;
+    }
+    .daBigLottie {
+        display: none;
+    }
+    .daSmolLottie {
+        display: block;
+    }
+    .contactText {
+        font-size: 12px;
+        font-weight: 400;
+    }
+    .contactIcon {
+        font-size: 4rem;
+        margin: 0px;
+    }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1280px) {
+    .typewriter {
+        font-size: 2.5rem !important;
+        width: 420px !important;
+    }
+    .mainText {
+        font-size: 1.6rem;
+    }
+
+    .secText {
+        font-size: 1.4rem;
+    }
+    .smallText {
+        font-size: 1.1rem;
+    }
+    .headerDiv {
+        width: 100%;
+        padding: 1rem;
+        margin: 0;
+    }
+    /* .content {
+        width: 100% !important;
+    } */
+    .projectsSec {
+        height: auto;
+    }
+    .projectCard {
+        margin: 1rem;
+    }
+    .daBigLottie {
+        display: none;
+    }
+    .daSmolLottie {
+        display: block;
+    }
+    .contactIcon {
+        font-size: 5rem;
+        margin: 0px;
+    }
+}
+
+@media screen and (min-width: 2400px) {
+    .content {
+        max-width: 1580px;
+    }
+}
