@@ -429,7 +429,7 @@ function App() {
                     </Modal>
 
                     <div
-                        style={{ height: "10rem", width: "100%" }}
+                        style={{ height: "1rem", width: "100%" }}
                         className="lottieBgCont"
                     ></div>
                 </Content>

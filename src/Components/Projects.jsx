@@ -2,6 +2,7 @@ import { Col, Flex, Row, Typography } from "antd";
 import Lottie from "lottie-react";
 import Project from "./Project";
 import project1 from "../assets/images/project1.png";
+import project2 from "../assets/images/project2.png";
 import { motion, useAnimation, useInView } from "framer-motion";
 import LetterAnimation from "./LetterAnimation";
 import anim2 from "../assets/anim2.json";
@@ -156,7 +157,12 @@ const Projects = ({ previousProjectsRef }) => {
                         id="project-2"
                     >
                         <motion.li className="projectCard" variants={cardItem}>
-                            <Project comingSoon />
+                            <Project
+                                linkHref="https://xsav6.github.io/landing-page/"
+                                src={project2}
+                                title="Modern Landing Page"
+                                info="Simple yet modern landing page that can fit for any company, it's responsive modern and simple."
+                            />
                         </motion.li>
                     </Col>
                     <Col
