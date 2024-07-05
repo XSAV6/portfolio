@@ -13,13 +13,13 @@ const Skill = ({
     second,
 }) => {
     const item = {
-        hidden: { scale: 0, rotate: 180 },
+        hidden: { opacity: 0, y: 50 },
         show: {
-            scale: 1,
-            rotate: 0,
+            opacity: 1,
+            y: 0,
             transition: {
                 type: "spring",
-                stiffness: 120,
+                stiffness: 260,
                 damping: 20,
                 duration: 0.8,
             },
@@ -41,10 +41,18 @@ const Skill = ({
         if (second && secondStart && isInView) {
             controls.start("show");
         }
-    }, [isInView]);
+    }, [secondStart, isInView]);
     return (
         <Col span={8}>
-            <motion.div style={{ height: "100%", margin: 0 }} variants={item}>
+            <motion.div
+                whileHover={{ scale: 1.2 }}
+                whileTap={{
+                    scale: 0.8,
+                    borderRadius: "100%",
+                }}
+                style={{ height: "100%", margin: 0 }}
+                variants={item}
+            >
                 <Flex
                     vertical
                     justify="space-between"
@@ -52,6 +60,7 @@ const Skill = ({
                     flex={1}
                     style={{ height: "100%" }}
                     gap={"1rem"}
+                    className="ThisONE!!!!!!!!!!!!!!!!!!!!!!!"
                 >
                     <Flex
                         style={{ height: "100%" }}

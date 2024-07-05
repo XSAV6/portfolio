@@ -1,5 +1,6 @@
 export const COLORS = {
     primaryBlue: "#2f54eb",
+    darkPrimaryBlue: "#0a84ff",
     silver: "#C0C0C0",
     spaceGray: "#808080",
     gold: "#FFD700",
@@ -9,10 +10,12 @@ export const COLORS = {
     green: "#4CD964",
     yellow: "#FFCC00",
     purple: "#5856D6",
-    white: "#FFFFFF",
-    black: "#000000",
-    productRed: "#FF3B30",
+    white: "#F3F4F7",
+    black: "#0A0A0B",
+    red: "#FF3B30",
     orange: "#FF9500",
     pink: "#FF2D55",
     cyan: "#409cff",
+    darkBg: "#0A0A0B",
+    lightBg: "#F3F4F7",
 };

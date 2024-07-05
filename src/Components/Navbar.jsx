@@ -101,7 +101,7 @@ const Navbar = ({
                             </span>
                             <span
                                 style={{
-                                    color: COLORS.productRed,
+                                    color: COLORS.red,
                                     position: "absolute",
                                     top: 10,
                                     left: "1.7rem",

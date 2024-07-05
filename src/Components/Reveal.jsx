@@ -44,7 +44,7 @@ const Reveal = ({ children, id }) => {
                     staggerChildren: 0.35,
                 }}
             >
-                {isInView && children}
+                {children}
             </motion.div>
         </div>
     );

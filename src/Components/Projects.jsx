@@ -1,12 +1,9 @@
 import { Col, Flex, Row, Typography } from "antd";
-import Lottie from "lottie-react";
 import Project from "./Project";
 import project1 from "../assets/images/project1.png";
 import project2 from "../assets/images/project2.png";
 import { motion, useAnimation, useInView } from "framer-motion";
 import LetterAnimation from "./LetterAnimation";
-import anim2 from "../assets/anim2.json";
-import anim3 from "../assets/anim3.json";
 import { useEffect, useRef } from "react";
 const { Title, Text } = Typography;
 
@@ -16,10 +13,9 @@ const Projects = ({ previousProjectsRef }) => {
     const cardsControls = useAnimation();
 
     const cardContainer = {
-        hidden: { scale: 0, rotate: 180 },
+        hidden: { opacity: 0 },
         show: {
-            scale: 1,
-            rotate: 0,
+            opacity: 1,
             transition: {
                 staggerChildren: 0.6,
             },
@@ -27,15 +23,14 @@ const Projects = ({ previousProjectsRef }) => {
     };
 
     const cardItem = {
-        hidden: { scale: 0, rotate: 180 },
+        hidden: { opacity: 0, y: 50 },
         show: {
-            scale: 1,
-            rotate: 0,
+            opacity: 1,
+            y: 0,
             transition: {
                 type: "spring",
-                stiffness: 150,
+                stiffness: 260,
                 damping: 20,
-                // ease: "easeInOut",
                 duration: 0.8,
             },
         },
@@ -57,8 +52,6 @@ const Projects = ({ previousProjectsRef }) => {
             ref={previousProjectsRef}
             className="lottieBgCont projectsSec"
         >
-            <Lottie animationData={anim2} className="lottieBg daBigLottie" />
-            <Lottie animationData={anim3} className="lottieBg daSmolLottie" />
             <Title className="subTitle" level={2}>
                 {cardsIsInView && (
                     <LetterAnimation>Previous Projects</LetterAnimation>
@@ -79,7 +72,7 @@ const Projects = ({ previousProjectsRef }) => {
                     padding: 0,
                 }}
             >
-                <Row justify="center" gutter={32}>
+                <Row justify="center" gutter={48}>
                     <Col
                         id="project-1"
                         xs={{
@@ -161,7 +154,7 @@ const Projects = ({ previousProjectsRef }) => {
                                 linkHref="https://xsav6.github.io/landing-page/"
                                 src={project2}
                                 title="Modern Landing Page"
-                                info="Simple yet modern landing page that can fit for any company, it's responsive modern and simple."
+                                info="Simple yet modern landing page that can fit for any company. Its responsive, modern and simple."
                             />
                         </motion.li>
                     </Col>

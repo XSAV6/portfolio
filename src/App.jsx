@@ -33,7 +33,6 @@ import Navbar from "./Components/Navbar";
 import LetterAnimation from "./Components/LetterAnimation";
 import Skills from "./Components/Skills";
 import anim1 from "./assets/anim1.json";
-import anim3 from "./assets/anim3.json";
 import Projects from "./Components/Projects";
 import hiImg from "./assets/images/Hi.gif";
 import { debounce } from "lodash";
@@ -55,30 +54,30 @@ function App() {
     };
 
     const words = [
-        "Mohammed Walid.",
-        "A Front-End Dev!",
-        "A Builder of Things!",
+        "I'm a computer enthusiast & front-end developer. I create modern web sites and web apps. Check out some of my work in the previous projects section.",
     ];
 
     const contactContainer = {
-        hidden: { opacity: 0, y: 100, scale: 0 },
+        hidden: { opacity: 0 },
         show: {
             opacity: 1,
-            y: 0,
-            scale: 1,
             transition: {
-                staggerChildren: 0.8,
+                staggerChildren: 0.6,
             },
         },
     };
 
     const contactItem = {
-        hidden: { opacity: 0, y: 100, scale: 0 },
+        hidden: { opacity: 0, y: 50 },
         show: {
             opacity: 1,
             y: 0,
-            scale: 1,
-            transition: { ease: "easeInOut", duration: 0.8 },
+            transition: {
+                type: "spring",
+                stiffness: 260,
+                damping: 20,
+                duration: 0.8,
+            },
         },
     };
 
@@ -112,14 +111,17 @@ function App() {
         };
     }, []);
 
+    const mainBlue = darkMode ? COLORS.primaryBlue : COLORS.darkPrimaryBlue;
+
     return (
         <ConfigProvider
             theme={{
                 algorithm: darkMode ? darkAlgorithm : defaultAlgorithm,
                 token: {
-                    colorPrimary: COLORS.primaryBlue,
-                    colorText: darkMode ? "white" : "black",
-                    colorLink: darkMode ? COLORS.cyan : COLORS.primaryBlue,
+                    colorPrimary: mainBlue,
+                    colorText: darkMode ? COLORS.white : COLORS.black,
+                    colorLink: mainBlue,
+                    colorBgBase: darkMode ? COLORS.darkBg : COLORS.lightBg,
                 },
             }}
         >
@@ -132,7 +134,15 @@ function App() {
                     darkMode={darkMode}
                     isScrolled={hasScrolled}
                 />
+
                 <Content className="content ">
+                    <Lottie
+                        loop
+                        autoplay
+                        style={{ width: "100%", height: "100%" }}
+                        animationData={anim1}
+                        className="sec1bg"
+                    />
                     <Flex
                         align="flex-start"
                         id="home"
@@ -143,7 +153,6 @@ function App() {
                             height: "100vh",
                         }}
                     >
-                        <Lottie animationData={anim1} className="sec1bg" />
                         <Flex
                             style={{ paddingTop: "5rem" }}
                             justify="center"
@@ -165,6 +174,26 @@ function App() {
                                         vertical
                                         className="textBox1"
                                     >
+                                        <Text className="termText bold">
+                                            <span
+                                                style={{ color: COLORS.green }}
+                                            >
+                                                $
+                                            </span>
+                                            root@
+                                            <span style={{ color: COLORS.red }}>
+                                                xsav6
+                                            </span>
+                                            :~#
+                                            <span
+                                                style={{
+                                                    color: mainBlue,
+                                                }}
+                                                className="blinkingCursor"
+                                            >
+                                                _
+                                            </span>
+                                        </Text>
                                         <Text className="mainText">
                                             Hi There{" "}
                                             <img
@@ -177,12 +206,7 @@ function App() {
                                             . I'm
                                         </Text>
                                         <Title level={1} className="typewriter">
-                                            <Typewriter
-                                                words={words}
-                                                loop
-                                                cursor
-                                                cursorBlinking
-                                            />
+                                            Mohammed Walid.
                                         </Title>
                                     </Flex>
                                     <Flex
@@ -191,22 +215,14 @@ function App() {
                                         gap="1rem"
                                         className="textBox2"
                                     >
-                                        <Text
-                                            style={{
-                                                color: COLORS.primaryBlue,
-                                                fontWeight: 500,
-                                            }}
-                                            className="secText"
-                                        >
-                                            <LetterAnimation>
-                                                Frontend Developer
-                                            </LetterAnimation>
+                                        <Text className="smallText heroDescSmall">
+                                            <Typewriter
+                                                words={words}
+                                                cursor
+                                                cursorBlinking
+                                            />
                                         </Text>
-                                        <Text className="smallText">
-                                            <LetterAnimation>
-                                                4 Years Of Experience
-                                            </LetterAnimation>
-                                        </Text>
+
                                         <Button
                                             icon={<MailOutlined />}
                                             type="primary"
@@ -227,8 +243,8 @@ function App() {
                             </Flex>
                             <Flex flex={1}>
                                 <motion.div
-                                    initial={{ x: 75, scale: 0.5, opacity: 0 }}
-                                    animate={{ x: 0, scale: 1, opacity: 1 }}
+                                    initial={{ scale: 1, opacity: 0 }}
+                                    animate={{ scale: 1, opacity: 1 }}
                                     transition={{
                                         duration: 0.5,
                                         delay: 0.5,
@@ -253,21 +269,6 @@ function App() {
                             vertical
                             className="lottieBgCont"
                         >
-                            <Lottie
-                                animationData={anim3}
-                                className="lottieBg"
-                                style={{ width: "40%", height: "40%" }}
-                            />
-                            <Lottie
-                                animationData={anim3}
-                                style={{
-                                    position: "absolute",
-                                    bottom: 0,
-                                    right: 0,
-                                    width: "20%",
-                                    height: "20%",
-                                }}
-                            />
                             <Title className="subTitle2" level={2}>
                                 <LetterAnimation>
                                     Coding Ideas Into Existence!
@@ -287,7 +288,7 @@ function App() {
                     <Divider />
                     <Flex
                         style={{
-                            height: "100vh",
+                            height: "90vh",
                         }}
                         justify="center"
                         vertical
@@ -296,16 +297,6 @@ function App() {
                         ref={contactSecRef}
                         className="lottieBgCont"
                     >
-                        <Lottie
-                            animationData={anim3}
-                            className="lottieBg"
-                            style={{
-                                width: "50%",
-                                height: "50%",
-                                transform: "rotate(90deg)",
-                            }}
-                        />
-
                         <Title level={2} className="subTitle">
                             <LetterAnimation>Contact me</LetterAnimation>
                         </Title>
@@ -327,7 +318,7 @@ function App() {
                                         <MailOutlined
                                             style={{
                                                 display: "block",
-                                                color: COLORS.primaryBlue,
+                                                color: mainBlue,
                                             }}
                                             className="contactIcon"
                                         />
@@ -375,18 +366,6 @@ function App() {
                                 </Col>
                             </Row>
                         </motion.ol>
-                        <Lottie
-                            animationData={anim3}
-                            style={{
-                                width: "50%",
-                                height: "30%",
-                                position: "absolute",
-                                bottom: 0,
-                                right: 0,
-                                zIndex: 1,
-                                display: "inline",
-                            }}
-                        />
                     </Flex>
                     <Footer
                         style={{

@@ -10,30 +10,26 @@ import Tailwind from "../assets/expertise/tailwind.svg";
 import Antd from "../assets/expertise/antd.svg";
 import React, { useRef, useState } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
-import anim3 from "../assets/anim3.json";
-import Lottie from "lottie-react";
 
 const Skills = () => {
-    const [secondStart, setSecondStart] = useState(false);
+    const [secondStart, setSecondStart] = useState(true);
     const ref = useRef();
     const ref2 = useRef();
     const isInView = useInView(ref, { once: true });
     const isInView2 = useInView(ref2, { once: true });
     const container = {
-        hidden: { scale: 0, rotate: 180 },
+        hidden: { opacity: 0 },
         show: {
-            scale: 1,
-            rotate: 0,
+            opacity: 1,
             transition: {
                 staggerChildren: 0.6,
             },
         },
     };
     const container2 = {
-        hidden: { scale: 0, rotate: 180 },
+        hidden: { opacity: 0 },
         show: {
-            scale: 1,
-            rotate: 0,
+            opacity: 1,
             transition: {
                 staggerChildren: 0.6,
             },
@@ -55,31 +51,6 @@ const Skills = () => {
             id="skills"
             className="lottieBgCont"
         >
-            <Lottie
-                animationData={anim3}
-                className="lottieBg"
-                style={{ width: "40%", height: "40%" }}
-            />
-            <Lottie
-                animationData={anim3}
-                style={{
-                    position: "absolute",
-                    top: "20%",
-                    right: 0,
-                    width: "30%",
-                    height: "30%",
-                }}
-            />
-            <Lottie
-                animationData={anim3}
-                style={{
-                    position: "absolute",
-                    bottom: 0,
-                    left: "30%",
-                    width: "20%",
-                    height: "20%",
-                }}
-            />
             <Title className="subTitle" style={{ letterSpacing: 3 }} level={2}>
                 <LetterAnimation>Expertise</LetterAnimation>
             </Title>
@@ -88,7 +59,7 @@ const Skills = () => {
                     variants={container}
                     initial="hidden"
                     transition={{
-                        type: "spring",
+                        type: "smooth",
                         stiffness: 150,
                         damping: 20,
                     }}
@@ -129,7 +100,7 @@ const Skills = () => {
                     variants={container2}
                     initial="hidden"
                     transition={{
-                        type: "spring",
+                        type: "smooth",
                         stiffness: 150,
                         damping: 20,
                     }}

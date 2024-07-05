@@ -2,6 +2,7 @@
     text-align: center;
     height: 100% !important;
     overflow: auto;
+    position: relative;
 }
 
 .header {
@@ -27,6 +28,10 @@
     border: none;
 }
 
+.bold {
+    font-weight: bold;
+}
+
 .content {
     padding: 1rem 2rem;
     max-width: 1280px;
@@ -44,6 +49,10 @@
     height: 100% !important;
     width: 100% !important;
     overflow: auto;
+    overflow-x: hidden;
+
+    position: relative;
+    /* z-index: 1; */
 }
 
 .ant-btn,
@@ -63,6 +72,15 @@
     height: calc(100vh - 64px);
     position: relative;
 }
+.bgLottie {
+    height: 100vh;
+    width: 100vw;
+    /* position: fixed; */
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    /* z-index: -1; */
+}
 
 @keyframes rotate {
     from {
@@ -79,6 +97,8 @@
     left: 0;
     width: 100%;
     height: 100%;
+    transform: rotate(-30deg);
+    /* z-index: -1; */
     /* animation: rotate infinite 45s linear; */
 }
 
@@ -94,11 +114,15 @@
     height: 100%;
 }
 
+.bigBtn {
+    transition: all 0.3s ease;
+}
+
 .bigBtn:hover {
     scale: 1.15;
     padding-left: 48px !important;
     padding-right: 48px !important;
-    box-shadow: rgba(100, 100, 111, 0.8) 0px 0px 29px 0px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 /* Define the animation for hovering in */
@@ -123,22 +147,19 @@
 
 /* Apply the initial animation and transition to the image */
 .Skill {
-    animation: none; /* Disable initial animation */
     transition: all 300ms ease;
     border: 1px solid transparent; /* Add a transparent border */
     cursor: pointer;
     width: 40%;
 }
 
-/* Apply the hover-in animation */
-.Skill:hover {
+/* .Skill:hover {
     animation: rotateAndScaleIn 500ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
-}
+} */
 
-/* Apply the hover-out animation */
-.Skill:not(:hover) {
+/* .Skill:not(:hover) {
     animation: rotateAndScaleOut 500ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
-}
+} */
 
 .ant-card-hoverable {
     transition: all 300ms ease;
@@ -176,7 +197,8 @@
 }
 
 .smallText {
-    font-size: 1.2rem;
+    font-size: 1rem;
+    text-align: left;
 }
 
 .heroLottie {
@@ -237,7 +259,7 @@
         font-size: 1.2rem;
     }
     .smallText {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
     .firstSec1 {
         text-align: center !important;
@@ -309,6 +331,12 @@
     .contactIcon {
         font-size: 3rem;
         margin: 0px;
+    }
+    .sec1bg {
+        display: none;
+    }
+    .heroDescSmall {
+        text-align: center;
     }
 }
 
@@ -421,7 +449,7 @@
         font-size: 1.4rem;
     }
     .smallText {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
     .headerDiv {
         width: 100%;
@@ -453,4 +481,25 @@
     .content {
         max-width: 1580px;
     }
+}
+
+.blinkingCursor {
+    font-weight: bold;
+    font-size: 1.5em;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+.termText {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
 }

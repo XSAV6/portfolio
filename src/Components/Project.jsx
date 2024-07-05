@@ -2,6 +2,7 @@ import { InfoCircleOutlined, LinkOutlined } from "@ant-design/icons";
 import { Button, Card, Divider, Image, Modal } from "antd";
 import Title from "antd/es/typography/Title";
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 const Project = ({
     comingSoon,
@@ -41,17 +42,26 @@ const Project = ({
             <Title level={5}>More Projects To Come...</Title>
         </Card>
     ) : (
-        <>
+        <motion.div
+            whileHover={{
+                scale: 1.15,
+                boxShadow: "0px 7px 29px 0px rgba(100, 100, 111, 0.2)",
+            }}
+            whileTap={{
+                scale: 0.8,
+                borderRadius: "100%",
+            }}
+            style={{ borderRadius: 16 }}
+        >
             <Card
                 id={id}
-                hoverable
                 style={{
                     width: 300,
                 }}
                 cover={
                     <img
                         style={{
-                            border: "1px solid #d1d1d1",
+                            // border: "1px solid #d1d1d1",
                             borderBottom: "none",
                         }}
                         height={150}
@@ -130,7 +140,7 @@ const Project = ({
                     </>
                 )}
             </Modal>
-        </>
+        </motion.div>
     );
 };
 
