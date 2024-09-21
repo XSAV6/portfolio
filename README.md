@@ -2,6 +2,8 @@
 
 Welcome to my portfolio! This project showcases my work and skills using Next.js and Tailwind CSS.
 
+Live URL of the portfolio: [Click Here](http://sav-dev-portfolio.web.app)
+
 ## Table of Contents
 
 - [Installation](#installation)
@@ -16,7 +18,7 @@ Welcome to my portfolio! This project showcases my work and skills using Next.js
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/portfolio.git
+    git clone https://github.com/xsav6/portfolio.git
     cd portfolio
     ```
 
@@ -45,13 +47,9 @@ To view the portfolio locally, navigate to `http://localhost:3000` in your brows
 - Server-side rendering with Next.js
 - Interactive components and transitions
 
-## Screenshots
-
-![Homepage](https://via.placeholder.com/800x400?text=Homepage)
-![Project Page](https://via.placeholder.com/800x400?text=Project+Page)
-
 ## Technologies Used
 
+- **React.js**: JavaScript library for building user interfaces with a component-based architecture.
 - **Next.js**: React framework for server-side rendering
 - **Tailwind CSS**: Utility-first CSS framework
 - **Framer Motion**: Library for animations
