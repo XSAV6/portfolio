@@ -3,10 +3,11 @@ import Image from "next/image";
 import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "@/hooks/use-outside-click";
-import invMan from "@/public/images/invManager.webp";
-import lanPage from "@/public/images/landingPage.webp";
-import qest from "@/public/images/q.webp";
 import { IconInfoCircle, IconLink, IconX } from "@tabler/icons-react";
+import invMan from "../../public/images/invManager.webp";
+import lanPage from "../../public/images/landingPage.webp";
+import ques from "../../public/images/q.webp";
+import adminDashboard from "../../public/images/adminDashboard.webp";
 
 export default function ExpandableCard() {
     const [active, setActive] = useState<
@@ -78,7 +79,6 @@ export default function ExpandableCard() {
                                 layoutId={`image-${active.title}-${id}`}
                             >
                                 <Image
-                                    priority
                                     width={800}
                                     height={800}
                                     src={active.src}
@@ -261,6 +261,44 @@ const cards = [
         },
     },
     {
+        description: "Admin Dashboard made with NextJs",
+        title: "Admin Dashboard",
+        src: adminDashboard,
+        ctaText: "Live Preview",
+        ctaLink: "https://sav-admin-dashboard.web.app/",
+        content: () => {
+            return (
+                <>
+                    <p>
+                        The Admin Dashboard is a user-friendly web interface
+                        that helps administrators manage and visualize data for
+                        their applications or services. Built with a modern,
+                        responsive design, the dashboard adapts seamlessly to
+                        different screen sizes, offering optimal usability
+                        across mobile, tablet, and desktop devices.
+                    </p>
+                    <p>
+                        The dashboard includes a dynamic sidebar for easy
+                        navigation, comprehensive data tables with sorting and
+                        pagination features, and real-time data visualization
+                        using interactive charts. With the dark mode toggle,
+                        users can customize the look and feel to suit their
+                        preferences. Whether for analytics, content management,
+                        or system monitoring, this dashboard provides a flexible
+                        and customizable environment to manage your project's
+                        data efficiently.
+                    </p>
+                    <p>
+                        It's ideal for businesses, developers, and organizations
+                        that require an intuitive admin panel to control and
+                        monitor their application's operations, analytics, or
+                        content.
+                    </p>
+                </>
+            );
+        },
+    },
+    {
         description: "Landing Page Template",
         title: "Landing Page",
         src: lanPage,
@@ -279,7 +317,7 @@ const cards = [
     {
         description: "More Coming Soon",
         title: "?",
-        src: qest,
+        src: ques,
         ctaText: "Live Preview Soon",
         ctaLink: "",
         content: () => {

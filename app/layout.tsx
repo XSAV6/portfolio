@@ -22,7 +22,7 @@ export default function RootLayout({
                 <title>XSAV6 Portfolio 👀</title>
                 <meta
                     name="description"
-                    content="My Name is Mohammed Cebe AKA XSAV6, and this is my web development portfolio."
+                    content="My Name is Mohammed Walid AKA XSAV6, and this is my web development portfolio."
                 />
                 <meta name="theme-color" content="#171717" />
                 <link rel="icon" href="/favicon.ico" />

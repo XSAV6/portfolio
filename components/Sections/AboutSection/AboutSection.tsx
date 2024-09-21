@@ -4,9 +4,9 @@ import { FloatingDockDemo } from "@/components/FloatingDock/FloatingDock";
 import MobileTechStack from "@/components/MobileTechStack/MobileTechStack";
 import Image from "next/image";
 import React from "react";
-import Me from "@/public/images/me.webp";
 import { MeteorCard } from "@/components/MeteorCard/MeteorCard";
 import { FlipWords } from "@/components/ui/flip-words";
+import me from "../../../public/images/me.webp";
 
 const AboutSection = () => {
     return (
@@ -33,7 +33,7 @@ const AboutSection = () => {
                                 </p>
                             </>
                         }
-                        desc="I'm Mohammed Cebe, 18 years old, I've been self-learning and passionate about tech and programming since the age of 13, leading to being successful at creating projects independently or within a team and being very adaptable to change and learning new things, I care a lot about details and creating an amazing user experience. I have proved competence whenever I faced a problem. I believe my competence gives me a huge advantage making me a problem solver for almost every problem I may face."
+                        desc="I'm Mohammed Walid, 18 years old, I've been self-learning and passionate about tech and programming since the age of 13, leading to being successful at creating projects independently or within a team and being very adaptable to change and learning new things, I care a lot about details and creating an amazing user experience. I have proved competence whenever I faced a problem. I believe my competence gives me a huge advantage making me a problem solver for almost every problem I may face."
                         btnText="Download CV"
                     />
                 </div>
@@ -43,7 +43,7 @@ const AboutSection = () => {
                     <Image
                         width={800}
                         height={800}
-                        src={Me}
+                        src={me}
                         alt="self portrait"
                         className="aspect-square max-w-96 max-sm:max-w-64 rounded-full object-cover"
                     />
