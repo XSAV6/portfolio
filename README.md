@@ -18,7 +18,7 @@ Live URL of the portfolio: [Click Here](http://sav-dev-portfolio.web.app)
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/portfolio.git
+    git clone https://github.com/xsav6/portfolio.git
     cd portfolio
     ```
 
