@@ -16,7 +16,7 @@ export default function Background() {
             initial="hidden"
             animate="enter"
             transition={{ type: "linear" }}
-            className="fixed top-0 left-0 -z-10 w-full h-full"
+            className="fixed top-0 left-0 -z-10 w-full h-full max-sm:hidden "
         >
             <BackgroundBeamsWithCollision />
         </motion.div>

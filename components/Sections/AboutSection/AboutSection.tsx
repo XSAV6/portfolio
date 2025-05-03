@@ -7,8 +7,10 @@ import React from "react";
 import { MeteorCard } from "@/components/MeteorCard/MeteorCard";
 import { FlipWords } from "@/components/ui/flip-words";
 import me from "../../../public/images/me.webp";
+import DesktopTechStack from "@/components/DesktopTechStack/DesktopTechStack";
 
 const AboutSection = () => {
+    const age = new Date().getFullYear() - 2006;
     return (
         <section
             id="about"
@@ -26,20 +28,19 @@ const AboutSection = () => {
                                     I build
                                 </p>
                                 <FlipWords
-                                    words={["beautiful", "modern", "amazing"]}
+                                    words={["beautiful", "modern", "unique"]}
                                 />
                                 <p className="text-center max-md:text-sm inline">
                                     websites.
                                 </p>
                             </>
                         }
-                        desc="I'm Mohammed Walid, 18 years old, I've been self-learning and passionate about tech and programming since the age of 13, leading to being successful at creating projects independently or within a team and being very adaptable to change and learning new things, I care a lot about details and creating an amazing user experience. I have proved competence whenever I faced a problem. I believe my competence gives me a huge advantage making me a problem solver for almost every problem I may face."
+                        desc={"I'm Mohammed Walid, " + age + " years old, I've been self-learning and passionate about tech and programming since the age of 13, leading to being successful at creating projects independently or within a team and being very adaptable to change and learning new things, I care a lot about details and creating an amazing user experience. I have proved competence whenever I faced a problem. I believe my competence gives me a huge advantage making me a problem solver for almost every problem I may face."}
                         btnText="Download CV"
                     />
                 </div>
 
                 <div className="flex-1 rounded-full h-full flex items-center justify-between flex-col gap-8">
-                    <FloatingDockDemo />
                     <Image
                         width={800}
                         height={800}
@@ -47,9 +48,10 @@ const AboutSection = () => {
                         alt="self portrait"
                         className="aspect-square max-w-96 max-sm:max-w-64 rounded-full object-cover"
                     />
-                    <MobileTechStack />
                 </div>
             </div>
+            <DesktopTechStack />
+                    <MobileTechStack />
         </section>
     );
 };
