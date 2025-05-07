@@ -117,9 +117,9 @@ export function MeteorCard({
                     }}
                     animate={controls}
                     ref={popUpRef}
-                    className="absolute -bottom-20 left-5 flex flex-col gap-2 z-50 px-2 py-2 rounded-lg ml-4 bg-[#171717]"
+                    className="absolute -bottom-20 left-5 flex flex-col gap-2 z-50 px-2 py-2 rounded-lg ml-4 bg-[#202020]"
                 >
-                    <div className="absolute rounded-lg top-0 left-8 -translate-y-full w-0 h-0 border-l-8 border-r-8 border-b-8 border-transparent border-b-[#313131]"></div>
+                    <div className="absolute rounded-lg top-0 left-8 -translate-y-full w-0 h-0 border-l-8 border-r-8 border-b-8 border-transparent border-b-[#202020]"></div>
                     <a href="/files/enCV.pdf" download>
                         <motion.button
                             whileHover={{
